@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="好きな子と付き合える確率を簡単に診断！">
+    <link rel="icon" href="https://raw.githubusercontent.com/sugoruru/site-material/main/favicon/Pg-v.png">
+    <link rel="stylesheet" href="style.css">
+    <title>💖好きな子と付き合える確率💖</title>
+</head>
+
+<body>
+    <div class="body">
+        <h1 class="title">好きな子と付き合える確率！</h1>
+        <div class="sub">(もともと彼女のいるリア充は散れ...)</div>
+        <hr size="2" />
+        <form id="my-form" target="hidden_iframe" onsubmit="submitted=true;" method="post"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8k1TSe9yBRa3V34kU6qgsO25YEyIITA1wsSfat1qsyj_K5g/formResponse">
+            <input id="my-name" type="text" name="entry.703981214" placeholder="自分の名前を入れてください！" class="myName"
+                required="required">💕
+            <input id="your-name" type="text" name="entry.1102023368" placeholder="好きな子の名前を入れてください！" class="myName"
+                required="required"><br />
+            <button type="submit" class="btn">診断する💓</button>
+        </form>
+        <script>
+            let submitted = false;
+
+            const page_transition = () => {
+                if (submitted) {
+                    document.body.innerHTML = `
+                    <div class='body'>
+                        <h1 class="title">${document.getElementById("my-name").value}と${document.getElementById("your-name").value}が付き合える確率は...</h1>
+                        <hr size="2" />
+                        <div class="heart">
+                            <div class="heartText">${Math.floor(document.getElementById("my-name").value.length * document.getElementById("your-name").value.length / 5) + 80}％です！！</div>
+                        </div>
+                        <div class="reload">
+                            <button class="btn" onclick="window.location.reload()">もう一回！</button>
+                        </div>
+                    </div>
+                    `;
+                }
+            }
+        </script>
+        <iframe name="hidden_iframe" style="display:none;" onload="page_transition()"></iframe>
+    </div>
+</body>
+
+</html>

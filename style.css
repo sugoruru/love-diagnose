@@ -1,0 +1,74 @@
+body{
+    background-color: #aaa;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+}
+.myName{
+    width: 25vw;
+    height:5vh;
+    font-size: 15px;
+    margin:10px;
+    border-radius: 5px;
+    outline: none;
+    border:2px solid #aaa;
+}
+#my-form{
+    text-align: center;
+}
+hr{
+    background-color: black;
+    border: 2px solid #000;
+}
+.title{
+    text-align: center;
+    font-size:22px;
+    position:relative;
+    top:20px;
+}
+.body{
+    height:110vh;
+    width:80vw;
+    position:relative;
+    top:-20px;
+    left:10vw;
+    background-color: white;
+}
+.sub{
+    text-align: center;
+}
+.btn{
+    background-color: #0098c7;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0.75rem 0.75rem 0 rgb(0 0 0 / 20%);
+    height:10vh;
+    width:70vw;
+    color:white;
+    font-weight: 600;
+    font-size:xx-large;
+    transition: 0.5s all;
+}
+.btn:hover{
+    box-shadow: none;
+    transition: 0.5s all;
+}
+.heart {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+.heartText{
+    font-size: xx-large;
+    text-align: center;
+    width: 80vw;
+    position: relative;
+    top:4.5vh;
+}
+.reload{
+    text-align: center;
+}
